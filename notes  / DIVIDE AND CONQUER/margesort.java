@@ -1,10 +1,11 @@
-//to write the code for mergesort
-// it works as arr is given and you have to sort it
-// first divide it into 2 part the further divide it till you get single element
+//to write the code for mergesort DEPTH FIRST CONCEPT
+// it works as big arr is given and you have to sort it
+// first divide it  into 2 parts by using mid fn left and right then further divide 
+//    it till you get single element
 //  then keep those elements into a temp arr in which you will write 
 // a fn to sort it then transfer it to the final arr as sorted
 
-// TIME COMPLEXITY : O(nlogn)
+// TIME COMPLEXITY : O(nlogn) its good
 // SPACE COMPLEXITY : O(n)
 
 //code
@@ -22,6 +23,7 @@ public class margesort{
         int j = mid + 1;  //iterator for right
         int k = 0;  //iterator for temp arr
 
+        //this loop compares the elemnt before keeping into the temp arr
         while( i<=mid && j<= ei){
             if(arr[i] <arr[j]){
                 temp[k] = arr[i];
@@ -40,7 +42,7 @@ public class margesort{
         while(j <= ei){
             temp[k++] =arr[j++];
         }
-
+        //copying temp to original arr
         for( k=0, i=si; k< temp.length; k++, i++){
             arr[i] =temp [k];
         }
