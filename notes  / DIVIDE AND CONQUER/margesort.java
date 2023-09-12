@@ -5,7 +5,8 @@
 //  then keep those elements into a temp arr in which you will write 
 // a fn to sort it then transfer it to the final arr as sorted
 
-// TIME COMPLEXITY : O(nlogn) its good
+// TIME        
+//COMPLEXITY : O(nlogn) its good
 // SPACE COMPLEXITY : O(n)
 
 //code
