@@ -1,12 +1,15 @@
-    public class backtrack_Arrays{  
+//Same hi cheez hai Recursion/ Divide and Conquer pdha n 
+//
+
+public class backtrack_Arrays{  
         public static void backtrack(int arr[], int i, int val){
             //base case
             if( i == arr.length){
-                printarr(arr);
+                printarr(arr); //while going from bottom to top of the Call Stack Print The array
                 return;
             }
             //recursion
-            arr[i] = val;
+            arr[i] = val; /
             backtrack(arr, i + 1, val + 1);
             arr[i]= arr[i] - 2;
         }
