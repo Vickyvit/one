@@ -1,3 +1,35 @@
+//code to print and count the substring
+
+public class printsubstring {
+
+    static int count = 0; // Initialize a counter variable
+
+    public static void substring(String str, String ans, int idx) {
+        if (idx == str.length()) {
+            if (ans.length() == 0) {
+                System.out.println("null");
+            } else {
+                System.out.println(ans);
+                count++; // Increment the counter when a substring is printed
+            }
+            return;
+        }
+        // Yes condition
+        substring(str, ans + str.charAt(idx), idx + 1);
+        // No condition
+        substring(str, ans, idx + 1);
+    }
+
+    public static void main(String args[]) {
+        String str = "KRITI";
+        substring(str, "", 0);
+        System.out.println("Total number of substrings: " + (count+1)); // Print the total count
+    }
+}
+
+
+
+
 /*public class printsubstring {
     
 public static void substring(String str, String ans, int idx){
@@ -30,31 +62,3 @@ private static int countSubstrCombinations(String str) {
     }
 }
 }*/
-public class printsubstring {
-
-    static int count = 0; // Initialize a counter variable
-
-    public static void substring(String str, String ans, int idx) {
-        if (idx == str.length()) {
-            if (ans.length() == 0) {
-                System.out.println("null");
-            } else {
-                System.out.println(ans);
-                count++; // Increment the counter when a substring is printed
-            }
-            return;
-        }
-        // Yes condition
-        substring(str, ans + str.charAt(idx), idx + 1);
-        // No condition
-        substring(str, ans, idx + 1);
-    }
-
-    public static void main(String args[]) {
-        String str = "KRITI";
-        substring(str, "", 0);
-        System.out.println("Total number of substrings: " + (count+1)); // Print the total count
-    }
-}
-
-
