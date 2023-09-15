@@ -1,3 +1,5 @@
+//NO OF COMBINATIONS : PERMUTATIONS
+
 public class permutation_3 {
 
     public static void permutation(String str, String ans){
